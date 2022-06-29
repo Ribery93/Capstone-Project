@@ -13,8 +13,8 @@ The application stores GOAL items, where each GOAL item contains the following f
 * `mealId` (string) - a unique id for a GOAL item
 * `createdAt` (string) - date and time when an item was created
 * `name` (string) - name of a GOAL item (e.g. "Salad wrap")
-* `dayOfWeek` (string) - day of the week on which the GOAL is to be eaten (default: the day of item creation)
-* `eaten` (boolean) - true if GOAL item has been eaten, false otherwise
+* `dayOfWeek` (string) - day of the week on which the GOAL is to be achive (default: the day of item creation)
+* `achive` (boolean) - true if GOAL item has been achive, false otherwise
 * `attachmentUrl` (string) (optional) - a URL pointing to an image attached to a GOAL item
 * `userId` (string) - id of a user who created a GOAL item.
 
