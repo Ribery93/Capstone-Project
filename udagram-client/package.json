@@ -2,8 +2,10 @@
   "name": "typescript-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://sj7jzgisf5.execute-api.us-east-2.amazonaws.com",
   "dependencies": {
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "dateformat": "^3.0.3",
     "immutability-helper": "^3.0.0",
     "react": "^17.0.2",

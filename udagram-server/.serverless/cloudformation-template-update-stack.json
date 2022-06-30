@@ -277,7 +277,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/capstone-goal-app/dev/1656547162842-2022-06-29T23:59:22.842Z/capstone-goal-app.zip"
+          "S3Key": "serverless/capstone-goal-app/dev/1656598975048-2022-06-30T14:22:55.048Z/capstone-goal-app.zip"
         },
         "Handler": "s_Auth.handler",
         "Runtime": "nodejs12.x",
@@ -313,7 +313,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/capstone-goal-app/dev/1656547162842-2022-06-29T23:59:22.842Z/capstone-goal-app.zip"
+          "S3Key": "serverless/capstone-goal-app/dev/1656598975048-2022-06-30T14:22:55.048Z/capstone-goal-app.zip"
         },
         "Handler": "s_GetGoals.handler",
         "Runtime": "nodejs12.x",
@@ -350,7 +350,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/capstone-goal-app/dev/1656547162842-2022-06-29T23:59:22.842Z/capstone-goal-app.zip"
+          "S3Key": "serverless/capstone-goal-app/dev/1656598975048-2022-06-30T14:22:55.048Z/capstone-goal-app.zip"
         },
         "Handler": "s_CreateGoal.handler",
         "Runtime": "nodejs12.x",
@@ -387,7 +387,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/capstone-goal-app/dev/1656547162842-2022-06-29T23:59:22.842Z/capstone-goal-app.zip"
+          "S3Key": "serverless/capstone-goal-app/dev/1656598975048-2022-06-30T14:22:55.048Z/capstone-goal-app.zip"
         },
         "Handler": "s_UpdateGoal.handler",
         "Runtime": "nodejs12.x",
@@ -424,7 +424,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/capstone-goal-app/dev/1656547162842-2022-06-29T23:59:22.842Z/capstone-goal-app.zip"
+          "S3Key": "serverless/capstone-goal-app/dev/1656598975048-2022-06-30T14:22:55.048Z/capstone-goal-app.zip"
         },
         "Handler": "s_DeleteGoal.handler",
         "Runtime": "nodejs12.x",
@@ -461,7 +461,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/capstone-goal-app/dev/1656547162842-2022-06-29T23:59:22.842Z/capstone-goal-app.zip"
+          "S3Key": "serverless/capstone-goal-app/dev/1656598975048-2022-06-30T14:22:55.048Z/capstone-goal-app.zip"
         },
         "Handler": "s_GenerateUploadUrl.handler",
         "Runtime": "nodejs12.x",
@@ -491,64 +491,64 @@
         "GenerateUploadUrlLogGroup"
       ]
     },
-    "AuthLambdaVersionXxsJ1Lf4bRICtbs2zJCzFhuItyCxe1GcOr7AdV6AAgY": {
+    "AuthLambdaVersionToJzMWbNObv4VpbeoL5WpDOowSgXwB5WORkU8buUtUI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AuthLambdaFunction"
         },
-        "CodeSha256": "iIXd54X76z0s2BFtqtGhjr/VtqfVxTHYSGT8nnViX7U="
+        "CodeSha256": "sw4Ck4ZzuWfLzp1Cn/a7zGHtRiz87G1w60al7Z3E63M="
       }
     },
-    "GetGoalsLambdaVersionhd88LgqPUYH6Jgsis12u0ke9raRxndbNDXUvwt9ZnQ": {
+    "GetGoalsLambdaVersionOEb2Drf90j12ZZ7KplM61ks2lEoRfLHSm9JUJesOQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetGoalsLambdaFunction"
         },
-        "CodeSha256": "iIXd54X76z0s2BFtqtGhjr/VtqfVxTHYSGT8nnViX7U="
+        "CodeSha256": "sw4Ck4ZzuWfLzp1Cn/a7zGHtRiz87G1w60al7Z3E63M="
       }
     },
-    "GenerateUploadUrlLambdaVersionQ1uMLMbbAHE6EQVPUxRJfAVjJ24RaGMPa3VKD7mV3o": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "GenerateUploadUrlLambdaFunction"
-        },
-        "CodeSha256": "iIXd54X76z0s2BFtqtGhjr/VtqfVxTHYSGT8nnViX7U="
-      }
-    },
-    "DeleteGoalLambdaVersion5hNWyssaBwaDlK4LMXLk8W1JHfiRsSlAJjJM6ILEUA": {
+    "DeleteGoalLambdaVersionojZFAh69yUNx0vW3QqIbx7hY8cFyumSDHkMHEFuadhw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteGoalLambdaFunction"
         },
-        "CodeSha256": "iIXd54X76z0s2BFtqtGhjr/VtqfVxTHYSGT8nnViX7U="
+        "CodeSha256": "sw4Ck4ZzuWfLzp1Cn/a7zGHtRiz87G1w60al7Z3E63M="
       }
     },
-    "CreateGoalLambdaVersionvhXCx0M49GmOXYcSw8noEQtFG91w9Tt3d89dGuNts": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "CreateGoalLambdaFunction"
-        },
-        "CodeSha256": "iIXd54X76z0s2BFtqtGhjr/VtqfVxTHYSGT8nnViX7U="
-      }
-    },
-    "UpdateGoalLambdaVersion4rFmoCvMTdbjWXtaIHVABa6xvHv0IF58pfgNy3KM": {
+    "UpdateGoalLambdaVersionRCYQzJhOcQuaZqm3DV0TTvzRq0inNgFkvndHJvZM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateGoalLambdaFunction"
         },
-        "CodeSha256": "iIXd54X76z0s2BFtqtGhjr/VtqfVxTHYSGT8nnViX7U="
+        "CodeSha256": "sw4Ck4ZzuWfLzp1Cn/a7zGHtRiz87G1w60al7Z3E63M="
+      }
+    },
+    "GenerateUploadUrlLambdaVersionpE10PZkYeZ0rj07wkGVNppye2BW5wk0tnmm3WfyFKg": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GenerateUploadUrlLambdaFunction"
+        },
+        "CodeSha256": "sw4Ck4ZzuWfLzp1Cn/a7zGHtRiz87G1w60al7Z3E63M="
+      }
+    },
+    "CreateGoalLambdaVersion6cGpmlExZv2nHNlD9pctC6aVCizHqmmCpCzaf5eaAQ": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "CreateGoalLambdaFunction"
+        },
+        "CodeSha256": "sw4Ck4ZzuWfLzp1Cn/a7zGHtRiz87G1w60al7Z3E63M="
       }
     },
     "ApiGatewayRestApi": {
@@ -1006,7 +1006,26 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "ContentType": "application/json"
+        "ContentType": "application/json",
+        "Schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "title": "group",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 3
+            },
+            "dueDate": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "dueDate"
+          ],
+          "additionalProperties": false
+        }
       }
     },
     "ApiGatewayMethodGoalsGoalidVarPatchApplicationJsonModel": {
@@ -1015,7 +1034,29 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "ContentType": "application/json"
+        "ContentType": "application/json",
+        "Schema": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "title": "group",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "dueDate": {
+              "type": "string"
+            },
+            "done": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "dueDate",
+            "done"
+          ],
+          "additionalProperties": false
+        }
       }
     },
     "AuthApiGatewayAuthorizer": {
@@ -1052,7 +1093,7 @@
         "Type": "TOKEN"
       }
     },
-    "ApiGatewayDeployment1656547089275": {
+    "ApiGatewayDeployment1656598889802": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -1402,7 +1443,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/capstone-goal-app/dev/1656547162842-2022-06-29T23:59:22.842Z/custom-resources.zip"
+          "S3Key": "serverless/capstone-goal-app/dev/1656598975048-2022-06-30T14:22:55.048Z/custom-resources.zip"
         },
         "FunctionName": "capstone-goal-app-dev-custom-resource-apigw-cw-role",
         "Handler": "apiGatewayCloudWatchRole/handler.handler",
@@ -1914,7 +1955,7 @@
     "AuthLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AuthLambdaVersionXxsJ1Lf4bRICtbs2zJCzFhuItyCxe1GcOr7AdV6AAgY"
+        "Ref": "AuthLambdaVersionToJzMWbNObv4VpbeoL5WpDOowSgXwB5WORkU8buUtUI"
       },
       "Export": {
         "Name": "sls-capstone-goal-app-dev-AuthLambdaFunctionQualifiedArn"
@@ -1923,46 +1964,46 @@
     "GetGoalsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetGoalsLambdaVersionhd88LgqPUYH6Jgsis12u0ke9raRxndbNDXUvwt9ZnQ"
+        "Ref": "GetGoalsLambdaVersionOEb2Drf90j12ZZ7KplM61ks2lEoRfLHSm9JUJesOQ"
       },
       "Export": {
         "Name": "sls-capstone-goal-app-dev-GetGoalsLambdaFunctionQualifiedArn"
       }
     },
-    "GenerateUploadUrlLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "GenerateUploadUrlLambdaVersionQ1uMLMbbAHE6EQVPUxRJfAVjJ24RaGMPa3VKD7mV3o"
-      },
-      "Export": {
-        "Name": "sls-capstone-goal-app-dev-GenerateUploadUrlLambdaFunctionQualifiedArn"
-      }
-    },
     "DeleteGoalLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteGoalLambdaVersion5hNWyssaBwaDlK4LMXLk8W1JHfiRsSlAJjJM6ILEUA"
+        "Ref": "DeleteGoalLambdaVersionojZFAh69yUNx0vW3QqIbx7hY8cFyumSDHkMHEFuadhw"
       },
       "Export": {
         "Name": "sls-capstone-goal-app-dev-DeleteGoalLambdaFunctionQualifiedArn"
       }
     },
-    "CreateGoalLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "CreateGoalLambdaVersionvhXCx0M49GmOXYcSw8noEQtFG91w9Tt3d89dGuNts"
-      },
-      "Export": {
-        "Name": "sls-capstone-goal-app-dev-CreateGoalLambdaFunctionQualifiedArn"
-      }
-    },
     "UpdateGoalLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateGoalLambdaVersion4rFmoCvMTdbjWXtaIHVABa6xvHv0IF58pfgNy3KM"
+        "Ref": "UpdateGoalLambdaVersionRCYQzJhOcQuaZqm3DV0TTvzRq0inNgFkvndHJvZM"
       },
       "Export": {
         "Name": "sls-capstone-goal-app-dev-UpdateGoalLambdaFunctionQualifiedArn"
+      }
+    },
+    "GenerateUploadUrlLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GenerateUploadUrlLambdaVersionpE10PZkYeZ0rj07wkGVNppye2BW5wk0tnmm3WfyFKg"
+      },
+      "Export": {
+        "Name": "sls-capstone-goal-app-dev-GenerateUploadUrlLambdaFunctionQualifiedArn"
+      }
+    },
+    "CreateGoalLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "CreateGoalLambdaVersion6cGpmlExZv2nHNlD9pctC6aVCizHqmmCpCzaf5eaAQ"
+      },
+      "Export": {
+        "Name": "sls-capstone-goal-app-dev-CreateGoalLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {

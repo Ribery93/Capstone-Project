@@ -10,7 +10,7 @@ const jwkToPem = require('jwk-to-pem')
 const logger = createLogger('auth')
 
 // from auth0 account
-const jwksUrl = 'https://dev-eoz6msj4.us.auth0.com/.well-known/jwks.json'
+const jwksUrl = 'https://ribery.auth0.com/.well-known/jwks.json'
 
 export const handler = async (
   event: CustomAuthorizerEvent
