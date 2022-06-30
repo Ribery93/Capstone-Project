@@ -2,14 +2,14 @@ import 'source-map-support/register'
 
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import { CreateGoalRequest } from '../../requests/CreateGoalRequest'
-import { createGoal } from '../../helpers/todos'
+import { createGoal } from '../../helpers/getGoals'
 import { createLogger } from '../../utils/logger'
 import * as middy from 'middy'
 import { cors } from 'middy/middlewares'
-import { GoalsAccess } from '../../helpers/todosAcess'
+import { GoalsAccess } from '../../helpers/goalsAcess'
 
 const logger = createLogger('createGoal')
-const todosAccess = new GoalsAccess()
+const goalsAccess = new GoalsAccess()
 
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
@@ -20,8 +20,8 @@ export const handler = middy(
 
     const newGoal: CreateGoalRequest = JSON.parse(event.body)
     const toDoItem = await createGoal(newGoal, jwtToken)
-    const todoId = toDoItem.todoId
-    const url = todosAccess.generateUploadUrl(todoId)
+    const goalId = toDoItem.goalId
+    const url = goalsAccess.generateUploadUrl(goalId)
 
     return {
       statusCode: 201,

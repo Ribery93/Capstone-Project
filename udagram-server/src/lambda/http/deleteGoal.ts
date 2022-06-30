@@ -1,7 +1,7 @@
 import 'source-map-support/register'
 
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
-import { deleteGoal } from '../../helpers/todos'
+import { deleteGoal } from '../../helpers/getGoals'
 import { createLogger } from '../../utils/logger'
 import * as middy from 'middy'
 import { cors } from 'middy/middlewares'
@@ -15,9 +15,9 @@ export const handler = middy(
     const split = authorization.split(' ')
     const jwtToken = split[1]
 
-    const todoId = event.pathParameters.todoId
+    const goalId = event.pathParameters.goalId
 
-    const delGoal = await deleteGoal(todoId, jwtToken)
+    const delGoal = await deleteGoal(goalId, jwtToken)
 
     return {
       statusCode: 200,

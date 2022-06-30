@@ -1,7 +1,8 @@
+org: ribery93
+app: capstone-goal-app
 # # GOAL: Change the name of the org
 # # Updated By Sayed Atef
-service:
-  name: serverless-todo-app
+service: capstone-goal-app
 
 plugins:
   - serverless-webpack
@@ -19,9 +20,9 @@ provider:
 
   environment:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
-    PROJECT_NAME: serverless-todo-app
-    GOALS_TABLE: todo-backend-table-${self:provider.stage}
-    S3_BUCKET_NAME: todo-bucket-${self:provider.stage}
+    PROJECT_NAME: capstone-goal-app
+    GOALS_TABLE: goal-backend-table-${self:provider.stage}
+    S3_BUCKET_NAME: goal-bucket-${self:provider.stage}
 
   tracing:
     lambda: true
@@ -39,7 +40,7 @@ custom:
         info:
           version: '1.0.0'
           title: Goal API
-          description: Serverless todo application
+          description: Serverless goal application
 
 functions:
   Auth:
@@ -50,10 +51,10 @@ functions:
     events:
       - http:
           method: get
-          path: todos
+          path: goals
           cors: true
           authorizer: Auth
-    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-gettodo-${self:provider.stage}
+    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-getgoal-${self:provider.stage}
     iamRoleStatements:
       - Effect: Allow
         Action:
@@ -65,19 +66,19 @@ functions:
     events:
       - http:
           method: post
-          path: todos
+          path: goals
           cors: true
           authorizer: Auth
           request:
             schemas:
-              application/json: ${file(models/create-todo-model.json)}
+              application/json: ${file(models/create-goal-model.json)}
           documentation:
             summary: 'Create a new item'
             description: 'Create a new item'
             requestModels:
               'application/json': CreateGoalRequest
           reqValidatorName: onlyBody
-    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-createtodo-${self:provider.stage}
+    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-creategoal-${self:provider.stage}
     iamRoleStatements:
       - Effect: Allow
         Action:
@@ -89,19 +90,19 @@ functions:
     events:
       - http:
           method: patch
-          path: todos/{todoId}
+          path: goals/{goalId}
           cors: true
           authorizer: Auth
           request:
             schemas:
-              application/json: ${file(models/update-todo-model.json)}
+              application/json: ${file(models/update-goal-model.json)}
           documentation:
             summary: 'Update an item'
             description: 'Update an item'
             requestModels:
               'application/json': UpdateGoalRequest
           reqValidatorName: onlyBody
-    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-updatetodo-${self:provider.stage}
+    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-updategoal-${self:provider.stage}
     iamRoleStatements:
       - Effect: Allow
         Action:
@@ -113,10 +114,10 @@ functions:
     events:
       - http:
           method: delete
-          path: todos/{todoId}
+          path: goals/{goalId}
           cors: true
           authorizer: Auth
-    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-deletetodo-${self:provider.stage}
+    iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-deletegoal-${self:provider.stage}
     iamRoleStatements:
       - Effect: Allow
         Action:
@@ -128,7 +129,7 @@ functions:
     events:
       - http:
           method: post
-          path: todos/{todoId}/attachment
+          path: goals/{goalId}/attachment
           cors: true
           authorizer: Auth
     iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-s3upload-${self:provider.stage}
@@ -146,12 +147,12 @@ resources:
         AttributeDefinitions:
           - AttributeName: userId
             AttributeType: S
-          - AttributeName: todoId
+          - AttributeName: goalId
             AttributeType: S
         KeySchema:
           - AttributeName: userId
             KeyType: HASH
-          - AttributeName: todoId
+          - AttributeName: goalId
             KeyType: RANGE
         BillingMode: PAY_PER_REQUEST
         TableName: ${self:provider.environment.GOALS_TABLE}
